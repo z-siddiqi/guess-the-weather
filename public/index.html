@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,19 @@
     <link href="/build/tailwind.css" rel="stylesheet">
     <title>Tailwind</title>
 </head>
-<body>
-    <div class="container">
-        <h1 class="text-2xl font-bold">Hello, Tailwind!</h1>
+
+<body class="font-mono">
+    <nav class="flex flex-row justify-between items-center py-4 px-8 mb-7 bg-gray-700 w-full rounded-b-lg">
+        <div>
+            <a href="#" class="text-xl no-underline text-white hover:text-green-500">Guess the Weather!</a>
+        </div>
+        <ul>
+            <li><a href="#" class="text-md no-underline text-white hover:text-green-500 ml-2">About</a></li>
+        </ul>
+    </nav>
+    <div class="w-10/12 max-w-screen-lg mx-auto">
+        <h1 class="text-4xl text-gray-700 font-bold">Enter Guess</h1>
     </div>
 </body>
+
 </html>
