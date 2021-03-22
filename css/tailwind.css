@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-input[type=checkbox]:checked + label {
+input[type=radio]:checked + label {
     @apply border-gray-500;
 }
