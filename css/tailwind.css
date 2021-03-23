@@ -1,7 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components {
+    label {
+        @apply inline-block mb-2;
+    }
 
-input[type=radio]:checked + label {
-    @apply border-gray-500;
+    select {
+        @apply block appearance-none cursor-pointer;
+    }
+
+    input[type=radio]:checked+label {
+        @apply border-gray-400;
+    }
+
+    .navbar {
+        @apply flex flex-row justify-between items-center w-full py-4 px-8 mb-7 rounded-b-lg;
+    }
+
+    .navbar-brand {
+        @apply text-xl no-underline font-bold;
+    }
+
+    .form-control {
+        @apply w-full px-3 py-2 border-2 rounded shadow leading-tight focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+    }
+
+    .btn {
+        @apply my-4 py-2 px-3 font-semibold shadow rounded focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+    }
+
+    .btn-green {
+        @apply text-white bg-green-500 hover:bg-green-400;
+    }
 }
