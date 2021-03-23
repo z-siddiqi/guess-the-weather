@@ -9,86 +9,104 @@
     <title>Guess the Weather!</title>
 </head>
 
-<body class="font-mono">
-    <nav class="flex flex-row justify-between items-center py-4 px-8 mb-7 bg-gray-700 w-full rounded-b-lg">
-        <div>
-            <a href="#" class="text-xl no-underline text-white font-bold hover:text-green-400">Guess the Weather!</a>
-        </div>
-        <ul>
-            <li><a href="#" class="text-md no-underline text-white hover:text-green-400 ml-2">About</a></li>
-        </ul>
-    </nav>
-    <div class="container mx-auto px-8">
-        <h1 class="text-4xl text-gray-700 font-bold">Enter Guess</h1>
-        <form id="userGuessForm">
-            <div class="my-4">
-                <label class="inline-block mb-2" for="city">City</label>
-                <div class="inline-block relative w-full">
-                    <select
-                        class="block appearance-none w-full border-2 border-gray-400 hover:border-gray-500 px-3 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline cursor-pointer"
-                        name="city" id="city">
-                        <option value="Glasgow">Glasgow</option>
-                        <option value="Edinburgh">Edinburgh</option>
-                        <option value="London">London</option>
-                        <option value="Manchester">Manchester</option>
-                        <option value="Birmingham">Birmingham</option>
-                    </select>
-                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+<body>
+    <div class="font-mono flex flex-col h-screen">
+        <nav class="flex flex-row justify-between items-center py-4 px-8 mb-7 bg-gray-700 w-full rounded-b-lg">
+            <div>
+                <a href="#" class="text-xl no-underline text-white font-bold hover:text-green-400">Guess the
+                    Weather!</a>
+            </div>
+            <ul>
+                <li>
+                    <a href="https://github.com/z-siddiqi/guess-the-weather" class="text-white hover:text-green-400">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                         </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="container mx-auto mb-auto px-8">
+            <h1 class="text-4xl text-gray-700 font-bold">Enter Guess</h1>
+            <form id="userGuessForm">
+                <div class="my-4">
+                    <label class="inline-block mb-2" for="city">City</label>
+                    <div class="inline-block relative w-full">
+                        <select
+                            class="block appearance-none w-full border-2 border-gray-400 hover:border-gray-500 px-3 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline cursor-pointer"
+                            name="city" id="city">
+                            <option value="Glasgow">Glasgow</option>
+                            <option value="Edinburgh">Edinburgh</option>
+                            <option value="London">London</option>
+                            <option value="Manchester">Manchester</option>
+                            <option value="Birmingham">Birmingham</option>
+                        </select>
+                        <div
+                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="my-4">
-                <label class="inline-block mb-2">Weather Condition</label>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div>
-                        <input class="hidden" type="radio" name="condition" value="Clear" id="clear" required>
-                        <label
-                            class="flex justify-center bg-gray-100 border-2 border-gray-400 hover:border-gray-500 rounded shadow leading-tight focus:outline-none focus:shadow-outline cursor-pointer"
-                            for="clear" title="Clear">
-                            <img src="http://openweathermap.org/img/wn/01d@2x.png">
-                        </label>
-                    </div>
-                    <div>
-                        <input class="hidden" type="radio" name="condition" value="Clouds" id="clouds">
-                        <label
-                            class="flex justify-center bg-gray-100 border-2 border-gray-400 hover:border-gray-500 rounded shadow leading-tight focus:outline-none focus:shadow-outline cursor-pointer"
-                            for="clouds" title="Cloudy">
-                            <img src="http://openweathermap.org/img/wn/02d@2x.png">
-                        </label>
-                    </div>
-                    <div>
-                        <input class="hidden" type="radio" name="condition" value="Rain" id="rain">
-                        <label
-                            class="flex justify-center bg-gray-100 border-2 border-gray-400 hover:border-gray-500 rounded shadow leading-tight focus:outline-none focus:shadow-outline cursor-pointer"
-                            for="rain" title="Rain">
-                            <img src="http://openweathermap.org/img/wn/09d@2x.png">
-                        </label>
-                    </div>
-                    <div>
-                        <input class="hidden" type="radio" name="condition" value="Snow" id="snow">
-                        <label
-                            class="flex justify-center bg-gray-100 border-2 border-gray-400 hover:border-gray-500 rounded shadow leading-tight focus:outline-none focus:shadow-outline cursor-pointer"
-                            for="snow" title="Snow">
-                            <img src="http://openweathermap.org/img/wn/13d@2x.png">
-                        </label>
+                <div class="my-4">
+                    <label class="inline-block mb-2">Weather Condition</label>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div>
+                            <input class="hidden" type="radio" name="condition" value="Clear" id="clear" required>
+                            <label
+                                class="flex justify-center bg-gray-100 border-2 border-gray-400 hover:border-gray-500 rounded shadow leading-tight focus:outline-none focus:shadow-outline cursor-pointer"
+                                for="clear" title="Clear">
+                                <img src="http://openweathermap.org/img/wn/01d@2x.png">
+                            </label>
+                        </div>
+                        <div>
+                            <input class="hidden" type="radio" name="condition" value="Clouds" id="clouds">
+                            <label
+                                class="flex justify-center bg-gray-100 border-2 border-gray-400 hover:border-gray-500 rounded shadow leading-tight focus:outline-none focus:shadow-outline cursor-pointer"
+                                for="clouds" title="Cloudy">
+                                <img src="http://openweathermap.org/img/wn/02d@2x.png">
+                            </label>
+                        </div>
+                        <div>
+                            <input class="hidden" type="radio" name="condition" value="Rain" id="rain">
+                            <label
+                                class="flex justify-center bg-gray-100 border-2 border-gray-400 hover:border-gray-500 rounded shadow leading-tight focus:outline-none focus:shadow-outline cursor-pointer"
+                                for="rain" title="Rain">
+                                <img src="http://openweathermap.org/img/wn/09d@2x.png">
+                            </label>
+                        </div>
+                        <div>
+                            <input class="hidden" type="radio" name="condition" value="Snow" id="snow">
+                            <label
+                                class="flex justify-center bg-gray-100 border-2 border-gray-400 hover:border-gray-500 rounded shadow leading-tight focus:outline-none focus:shadow-outline cursor-pointer"
+                                for="snow" title="Snow">
+                                <img src="http://openweathermap.org/img/wn/13d@2x.png">
+                            </label>
+                        </div>
                     </div>
                 </div>
+                <div class="my-4">
+                    <label class="inline-block mb-2" for="temperature">Temperature (°C)</label>
+                    <input
+                        class="w-full px-3 py-2 bg-gray-100 border-2 border-gray-400 hover:border-gray-500 rounded shadow leading-tight focus:outline-none focus:shadow-outline cursor-text"
+                        type="number" name="temperature" value="18" id="temperature" min="-10" max="60" step="1">
+                </div>
+                <button
+                    class="my-4 py-2 px-3 shadow bg-green-500 hover:bg-green-400 focus:shadow-outline focus:outline-none text-white font-bold rounded"
+                    type="submit">
+                    Submit
+                </button>
+            </form>
+        </div>
+        <footer class="h-10 bg-gray-200">
+            <div class="text-center text-gray-500 py-2">
+                Made by <a href="https://github.com/z-siddiqi" class="font-bold hover:text-green-400">Zainuddin
+                    Siddiqi</a>
             </div>
-            <div class="my-4">
-                <label class="inline-block mb-2" for="temperature">Temperature (°C)</label>
-                <input
-                    class="w-full px-3 py-2 bg-gray-100 border-2 border-gray-400 hover:border-gray-500 rounded shadow leading-tight focus:outline-none focus:shadow-outline cursor-text"
-                    type="number" name="temperature" value="18" id="temperature" min="-10" max="60" step="1">
-            </div>
-            <button
-                class="my-4 py-2 px-3 shadow bg-green-500 hover:bg-green-400 focus:shadow-outline focus:outline-none text-white font-bold rounded"
-                type="submit">
-                Submit
-            </button>
-        </form>
+        </footer>
     </div>
     <script src="script.js"></script>
 </body>
