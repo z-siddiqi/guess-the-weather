@@ -12,8 +12,8 @@ form.addEventListener("submit", function (e) {
                 weatherCondition: json.weather[0].main,
                 temperature: Math.round(parseFloat(json.main.temp) - 273.15),  // convert to celsius
             };
-            console.log(userGuess);
-            console.log(answer);
+            let result = JSON.stringify(userGuess) === JSON.stringify(answer) ? "Correct!" : "Wrong!";
+            alert(result);
         })
         .catch(error => console.log(error));
 });
