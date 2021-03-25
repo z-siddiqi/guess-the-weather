@@ -19,8 +19,7 @@ form.addEventListener("submit", function (e) {
 });
 
 async function getWeather(city) {
-    let key = '';
-    let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`);
+    let response = await fetch(`/.netlify/functions/get-weather?city=${city}`);
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
     }
