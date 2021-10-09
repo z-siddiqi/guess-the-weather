@@ -10,7 +10,7 @@
         @apply block appearance-none cursor-pointer;
     }
 
-    input[type=radio]:checked+label {
+    input[type=radio]:checked+label, input[type=radio]:hover+label {
         @apply border-gray-400;
     }
 

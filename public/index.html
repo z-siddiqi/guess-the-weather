@@ -51,7 +51,7 @@
                 </div>
                 <div class="my-4">
                     <label>Weather Condition</label>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                         <div>
                             <input class="hidden" type="radio" name="condition" value="Clear" id="clear" required>
                             <label class="form-control flex justify-center mb-0 cursor-pointer" for="clear" title="Clear">
@@ -65,9 +65,21 @@
                             </label>
                         </div>
                         <div>
+                            <input class="hidden" type="radio" name="condition" value="Drizzle" id="drizzle" required>
+                            <label class="form-control flex justify-center mb-0 cursor-pointer" for="drizzle" title="Drizzle">
+                                <img src="https://openweathermap.org/img/wn/09d@2x.png">
+                            </label>
+                        </div>
+                        <div>
                             <input class="hidden" type="radio" name="condition" value="Rain" id="rain">
                             <label class="form-control flex justify-center mb-0 cursor-pointer" for="rain" title="Rain">
-                                <img src="https://openweathermap.org/img/wn/09d@2x.png">
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png">
+                            </label>
+                        </div>
+                        <div>
+                            <input class="hidden" type="radio" name="condition" value="Thunderstorm" id="thunderstorm">
+                            <label class="form-control flex justify-center mb-0 cursor-pointer" for="thunderstorm" title="Thunderstorm">
+                                <img src="https://openweathermap.org/img/wn/11d@2x.png">
                             </label>
                         </div>
                         <div>
